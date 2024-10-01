@@ -30,8 +30,8 @@ const MainRouter = () => {
  <Route exact path="/projects" element={<Projects/>} />
  <Route exact path="/services" element={<Services/>} />
  <Route exact path="/contact" element={<Contact/>} />
-
-
+  {/* Redirect root path "/" to "/home" */}
+  <Route path="/" element={<Navigate to="/home" />} />
 
 
  </Routes>
