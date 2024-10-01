@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - master  # Or 'master' if your branch is named master
+      - main  # Or 'master' if your branch is named master
 
 jobs:
   build:
@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3  # This will default to Node.js 20 in March 2024
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v3
@@ -49,3 +49,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+
