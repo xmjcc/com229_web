@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main  # Or 'master' if your branch is named master
+      - main  # Or 'master' if your branch is named master to comment
 
 jobs:
   build:
